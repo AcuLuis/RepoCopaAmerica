@@ -1,129 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>COPA AMÉRICA 2024</title>
-        <link rel = "stylesheet" href="styles_participantes.css">
-        <link rel="icon" type="image/jpeg" href="images/icono_copa.jpg">
-    </head>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Participantes | Copa América 2024</title>
+    <link rel="icon" type="image/jpeg" href="images/icono_copa.jpg">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
 <body>
-    <header>
-        <h1>COPA AMÉRICA 2024</h1>
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo_copa.png" alt="Logo Copa América 2024">
+    <header class="cabecera">
+        <div class="contenedor cabecera__barra">
+            <a class="marca" href="index.html" aria-label="Copa América 2024, ir al inicio">
+                <img src="images/logo_copa.png" alt="Copa América USA 2024" width="140" height="42">
             </a>
+            <button class="menu-boton" type="button" aria-expanded="false" aria-controls="navegacion">
+                <span class="menu-boton__barras" aria-hidden="true"></span>
+                <span>Menú</span>
+            </button>
+            <nav id="navegacion" class="navegacion" aria-label="Principal">
+                <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="participantes.html" aria-current="page">Participantes</a></li>
+                <li><a href="estadios.html">Estadios</a></li>
+                <li><a href="index.html#noticias">Noticias</a></li>
+                <li><a href="index.html#videos">Videos</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
+    </header>
+
+    <main id="contenido">
+        <section class="encabezado-pagina">
+            <div class="contenedor">
+                <h1>Países participantes</h1>
+                <p>Las selecciones que disputaron la Copa América 2024 en Estados Unidos.</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="rejilla">
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen tarjeta__imagen--bandera" src="images/argentina.jpg" alt="Bandera de Argentina" loading="lazy">
+                        <div class="tarjeta__cuerpo">
+                            <h2 class="tarjeta__titulo">Argentina</h2>
+                            <p class="tarjeta__dato">Capitán: <strong>Lionel Messi</strong></p>
+                            <div class="tarjeta__acciones">
+                                <a class="tarjeta__enlace" href="https://www.google.com/search?q=partidos+argentina" target="_blank" rel="noopener noreferrer">Ver partidos<span class="visualmente-oculto"> de Argentina (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen tarjeta__imagen--bandera" src="images/brasil.jpg" alt="Bandera de Brasil" loading="lazy">
+                        <div class="tarjeta__cuerpo">
+                            <h2 class="tarjeta__titulo">Brasil</h2>
+                            <p class="tarjeta__dato">Capitán: <strong>Neymar Jr.</strong></p>
+                            <div class="tarjeta__acciones">
+                                <a class="tarjeta__enlace" href="https://www.google.com/search?q=partidos+brasil" target="_blank" rel="noopener noreferrer">Ver partidos<span class="visualmente-oculto"> de Brasil (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen tarjeta__imagen--bandera" src="images/bandera_peru.png" alt="Bandera de Perú" loading="lazy">
+                        <div class="tarjeta__cuerpo">
+                            <h2 class="tarjeta__titulo">Perú</h2>
+                            <p class="tarjeta__dato">Capitán: <strong>Gianluca Lapadula</strong></p>
+                            <div class="tarjeta__acciones">
+                                <a class="tarjeta__enlace" href="https://www.google.com/search?q=peru+partidos" target="_blank" rel="noopener noreferrer">Ver partidos<span class="visualmente-oculto"> de Perú (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen tarjeta__imagen--bandera" src="images/colombia.png" alt="Bandera de Colombia" loading="lazy">
+                        <div class="tarjeta__cuerpo">
+                            <h2 class="tarjeta__titulo">Colombia</h2>
+                            <p class="tarjeta__dato">Capitán: <strong>James Rodríguez</strong></p>
+                            <div class="tarjeta__acciones">
+                                <a class="tarjeta__enlace" href="https://www.google.com/search?q=colombia+partidos" target="_blank" rel="noopener noreferrer">Ver partidos<span class="visualmente-oculto"> de Colombia (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen tarjeta__imagen--bandera" src="images/paraguay.png" alt="Bandera de Paraguay" loading="lazy">
+                        <div class="tarjeta__cuerpo">
+                            <h2 class="tarjeta__titulo">Paraguay</h2>
+                            <p class="tarjeta__dato">Capitán: <strong>Gustavo Gómez</strong></p>
+                            <div class="tarjeta__acciones">
+                                <a class="tarjeta__enlace" href="https://www.google.com/search?q=paraguay+partidos" target="_blank" rel="noopener noreferrer">Ver partidos<span class="visualmente-oculto"> de Paraguay (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen tarjeta__imagen--bandera" src="images/venezuela.png" alt="Bandera de Venezuela" loading="lazy">
+                        <div class="tarjeta__cuerpo">
+                            <h2 class="tarjeta__titulo">Venezuela</h2>
+                            <p class="tarjeta__dato">Capitán: <strong>Salomón Rondón</strong></p>
+                            <div class="tarjeta__acciones">
+                                <a class="tarjeta__enlace" href="https://www.google.com/search?q=venezuela+partidos" target="_blank" rel="noopener noreferrer">Ver partidos<span class="visualmente-oculto"> de Venezuela (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen tarjeta__imagen--bandera" src="images/uruguay.png" alt="Bandera de Uruguay" loading="lazy">
+                        <div class="tarjeta__cuerpo">
+                            <h2 class="tarjeta__titulo">Uruguay</h2>
+                            <p class="tarjeta__dato">Capitán: <strong>Luis Suárez</strong></p>
+                            <div class="tarjeta__acciones">
+                                <a class="tarjeta__enlace" href="https://www.google.com/search?q=uruguay+partidos" target="_blank" rel="noopener noreferrer">Ver partidos<span class="visualmente-oculto"> de Uruguay (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen tarjeta__imagen--bandera" src="images/chile.png" alt="Bandera de Chile" loading="lazy">
+                        <div class="tarjeta__cuerpo">
+                            <h2 class="tarjeta__titulo">Chile</h2>
+                            <p class="tarjeta__dato">Capitán: <strong>Claudio Bravo</strong></p>
+                            <div class="tarjeta__acciones">
+                                <a class="tarjeta__enlace" href="https://www.google.com/search?q=chile+partidos" target="_blank" rel="noopener noreferrer">Ver partidos<span class="visualmente-oculto"> de Chile (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen tarjeta__imagen--bandera" src="images/bolivia.png" alt="Bandera de Bolivia" loading="lazy">
+                        <div class="tarjeta__cuerpo">
+                            <h2 class="tarjeta__titulo">Bolivia</h2>
+                            <p class="tarjeta__dato">Capitán: <strong>Marcelo Martins</strong></p>
+                            <div class="tarjeta__acciones">
+                                <a class="tarjeta__enlace" href="https://www.google.com/search?q=bolivia+partidos" target="_blank" rel="noopener noreferrer">Ver partidos<span class="visualmente-oculto"> de Bolivia (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__contenido">
+                <div>
+                    <p class="pie__titulo">Copa América 2024</p>
+                    <p>Proyecto académico (ESAN) con fines informativos.</p>
+                </div>
+                <ul class="pie__enlaces">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="participantes.html">Participantes</a></li>
                 <li><a href="estadios.html">Estadios</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="participantes"> 
-        <br>
-        <p class="subti">PAÍSES PARTICIPANTES</p>  
-        <br>
-        <table> 
-            <tbody> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Argentina</p> 
-                        <a href="https://www.google.com/search?q=partidos+argentina" target="_blank" rel="noopener noreferrer">
-                            <img src="images/argentina.jpg" alt="Argentina" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capitán: Lionel Messi</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Brasil</p> 
-                        <a href="https://www.google.com/search?q=partidos+brasil" target="_blank" rel="noopener noreferrer">
-                            <img src="images/brasil.jpg" alt="Brasil" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capitán: Neymar Jr.</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Perú</p>
-                        <a href="https://www.google.com/search?q=peru+partidos" target="_blank" rel="noopener noreferrer">
-                            <img src="images/bandera_peru.png" alt="Perú" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capitán: Gianluca Lapadula</p> 
-                    </td> 
-                </tr> 
-            </tbody> 
-        </table> 
-        <table> 
-            <tbody> 
-                <tr class="pais">  
-                    <td> 
-                        <p class="caption-top">Colombia</p> 
-                        <a href="https://www.google.com/search?q=colombia+partidos" target="_blank" rel="noopener noreferrer">
-                            <img src="images/colombia.png" alt="Colombia" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capitán: James Rodríguez</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Paraguay</p> 
-                        <a href="https://www.google.com/search?q=paraguay+partidos" target="_blank" rel="noopener noreferrer">
-                            <img src="images/paraguay.png" alt="Paraguay" width="300px" height="200px"> 
-                        </a>
-                        <p class="caption-bottom">Capitán: Gustavo Gómez</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Venezuela</p> 
-                        <a href="https://www.google.com/search?q=venezuela+partidos" target="_blank" rel="noopener noreferrer">
-                            <img src="images/venezuela.png" alt="Venezuela" width="300px" height="200px"> 
-                        </a>
-                        <p class="caption-bottom">Capitán: Salomón Rondón</p> 
-                    </td> 
-                </tr> 
-            </tbody>
-        </table> 
-        <table> 
-            <tbody> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Uruguay</p>
-                        <a href="https://www.google.com/search?q=uruguay+partidos" target="_blank" rel="noopener noreferrer">
-                            <img src="images/uruguay.png" alt="Uruguay" width="300px" height="200px"> 
-                        </a> 
-                        <p class="caption-bottom">Capitán: Luis Suárez</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Chile</p>
-                        <a href="https://www.google.com/search?q=chile+partidos" target="_blank" rel="noopener noreferrer">
-                            <img src="images/chile.png" alt="Chile" width="300px" height="200px"> 
-                        </a> 
-                        <p class="caption-bottom">Capitán: Claudio Bravo</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Bolivia</p> 
-                        <a href="https://www.google.com/search?q=bolivia+partidos" target="_blank" rel="noopener noreferrer">
-                            <img src="images/bolivia.png" alt="Bolivia" width="300px" height="200px"> 
-                        </a>
-                        <p class="caption-bottom">Capitán: Marcelo Martins</p> 
-                    </td> 
-                </tr> 
-            </tbody>
-        </table> 
-    </section>
-<footer class="abajo">
-    <p>Proyecto académico (ESAN) con fines informativos. Código bajo licencia MIT.</p>
-</footer>
+                    <li><a href="https://github.com/AcuLuis/RepoCopaAmerica" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></li>
+                </ul>
+            </div>
+            <div class="pie__legal">
+                <p>Código bajo licencia MIT. Los nombres, logotipos e imágenes pertenecen a sus respectivos titulares.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/comun.js"></script>
 </body>
 </html>
