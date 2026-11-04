@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendario y resultados | Copa América 2024</title>
+    <link rel="icon" type="image/jpeg" href="images/icono_copa.jpg">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor cabecera__barra">
+            <a class="marca" href="index.html" aria-label="Copa América 2024, ir al inicio">
+                <img src="images/logo_copa.png" alt="Copa América USA 2024" width="140" height="42">
+            </a>
+            <button class="menu-boton" type="button" aria-expanded="false" aria-controls="navegacion">
+                <span class="menu-boton__barras" aria-hidden="true"></span>
+                <span>Menú</span>
+            </button>
+            <nav id="navegacion" class="navegacion" aria-label="Principal">
+                <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="participantes.html">Participantes</a></li>
+                <li><a href="estadios.html">Estadios</a></li>
+                <li><a href="calendario.html" aria-current="page">Calendario</a></li>
+                <li><a href="index.html#noticias">Noticias</a></li>
+                <li><a href="index.html#videos">Videos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <section class="encabezado-pagina">
+            <div class="contenedor">
+                <h1>Calendario y resultados</h1>
+                <p>Tablas de posiciones calculadas a partir de los resultados y el camino hasta la final.</p>
+            </div>
+        </section>
+
+        <section class="seccion" id="fase-grupos" aria-labelledby="tituloGrupos">
+            <div class="contenedor">
+                <nav aria-label="Secciones del calendario">
+                    <ul class="indice-pagina">
+                        <li><a class="filtro" href="#fase-grupos">Fase de grupos</a></li>
+                        <li><a class="filtro" href="#eliminatorias">Eliminatorias</a></li>
+                    </ul>
+                </nav>
+                <h2 class="seccion__titulo" id="tituloGrupos">Fase de grupos</h2>
+                <p class="seccion__intro">Orden por puntos, diferencia de gol y goles a favor. Los dos primeros de cada grupo avanzan a cuartos de final.</p>
+                <p class="leyenda">Clasificado a cuartos de final</p>
+                <div class="grupos" id="grupos"></div>
+                <noscript>
+                    <p class="sin-resultados">Activa JavaScript en tu navegador para ver este contenido.</p>
+                </noscript>
+            </div>
+        </section>
+
+        <section class="seccion seccion--blanca" id="eliminatorias" aria-labelledby="tituloEliminatorias">
+            <div class="contenedor">
+                <h2 class="seccion__titulo" id="tituloEliminatorias">Eliminatorias</h2>
+                <p class="seccion__intro">En cuartos, semifinales y tercer lugar, un empate se define por penales. Solo la final tuvo prórroga.</p>
+                <div class="cuadro" id="cuadro"></div>
+                <div class="tercer-lugar">
+                    <h3>Tercer lugar</h3>
+                    <div id="tercerLugar"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__contenido">
+                <div>
+                    <p class="pie__titulo">Copa América 2024</p>
+                    <p>Proyecto académico (ESAN) con fines informativos.</p>
+                </div>
+                <ul class="pie__enlaces">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="participantes.html">Participantes</a></li>
+                <li><a href="estadios.html">Estadios</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="https://github.com/AcuLuis/RepoCopaAmerica" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></li>
+                </ul>
+            </div>
+            <div class="pie__legal">
+                <p>Código bajo licencia MIT. Los nombres, logotipos e imágenes pertenecen a sus respectivos titulares.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/torneo.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/calendario.js"></script>
+</body>
+</html>

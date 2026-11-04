@@ -22,6 +22,7 @@
                 <li><a href="index.html" aria-current="page">Inicio</a></li>
                 <li><a href="participantes.html">Participantes</a></li>
                 <li><a href="estadios.html">Estadios</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
                 <li><a href="index.html#noticias">Noticias</a></li>
                 <li><a href="index.html#videos">Videos</a></li>
                 </ul>
@@ -30,14 +31,16 @@
     </header>
 
     <main id="contenido">
+        <h1 class="visualmente-oculto">Copa América 2024</h1>
+
         <section class="portada" aria-label="Portada">
-            <img src="images/fondo_entrada.png" alt="Copa América USA 2024: Siente la grandeza" width="1200" height="600">
+            <img src="images/fondo_entrada.png" alt="Copa América USA 2024: Siente la grandeza" width="1200" height="600" fetchpriority="high">
         </section>
 
         <section class="seccion" aria-labelledby="tituloContador">
             <div class="contenedor">
-                <h2 class="seccion__titulo" id="tituloContador">La Copa América 2024 inicia en</h2>
-                <div class="contador" data-contador>
+                <h2 class="seccion__titulo" id="tituloContador">Copa América 2024</h2>
+                <div class="contador" data-contador hidden>
                     <div class="contador__unidad"><span class="contador__valor" data-unidad="dias">0</span><span class="contador__etiqueta">Días</span></div>
                     <div class="contador__unidad"><span class="contador__valor" data-unidad="horas">00</span><span class="contador__etiqueta">Horas</span></div>
                     <div class="contador__unidad"><span class="contador__valor" data-unidad="minutos">00</span><span class="contador__etiqueta">Minutos</span></div>
@@ -46,7 +49,9 @@
                 <div class="aviso" data-contador-aviso hidden>
                     <p class="aviso__titulo" data-aviso-titulo></p>
                     <p data-aviso-detalle></p>
+                    <div class="aviso__extra" data-aviso-extra></div>
                 </div>
+                <div data-contador-partidos hidden></div>
             </div>
         </section>
 
@@ -61,10 +66,10 @@
                     edición Centenario de 2016, del 20 de junio al 14 de julio de 2024.
                 </p>
                 <ul class="cifras">
-                    <li class="cifra"><strong>16</strong><span>selecciones</span></li>
-                    <li class="cifra"><strong>14</strong><span>estadios</span></li>
-                    <li class="cifra"><strong>32</strong><span>partidos</span></li>
-                    <li class="cifra"><strong>25</strong><span>días de competencia</span></li>
+                    <li class="cifra" data-cifra="equipos"><strong>16</strong><span>selecciones</span></li>
+                    <li class="cifra" data-cifra="estadios"><strong>14</strong><span>estadios</span></li>
+                    <li class="cifra" data-cifra="partidos"><strong>32</strong><span>partidos</span></li>
+                    <li class="cifra" data-cifra="goles"><strong>25</strong><span>días de competencia</span></li>
                 </ul>
             </div>
         </section>
@@ -76,7 +81,7 @@
                 <div class="carrusel" data-carrusel role="region" aria-roledescription="carrusel" aria-label="Noticias destacadas">
                     <div class="carrusel__ventana" aria-live="off">
                         <article class="carrusel__diapositiva">
-                            <img class="carrusel__imagen" src="images_noticias/copa_gestion.avif" alt="">
+                            <img class="carrusel__imagen" src="images_noticias/copa_gestion.avif" alt="" loading="lazy">
                             <div class="carrusel__texto">
                                 <p class="carrusel__fuente">Gestión</p>
                                 <h3 class="carrusel__titulo">Copa América 2024: toda la cobertura del torneo</h3>
@@ -84,7 +89,7 @@
                             </div>
                         </article>
                         <article class="carrusel__diapositiva" hidden>
-                            <img class="carrusel__imagen" src="images_noticias/gareca_infobae.avif" alt="">
+                            <img class="carrusel__imagen" src="images_noticias/gareca_infobae.avif" alt="" loading="lazy">
                             <div class="carrusel__texto">
                                 <p class="carrusel__fuente">Soccerway</p>
                                 <h3 class="carrusel__titulo">Gareca, entrenador de Chile, se reencuentra con Perú en la Copa América</h3>
@@ -92,7 +97,7 @@
                             </div>
                         </article>
                         <article class="carrusel__diapositiva" hidden>
-                            <img class="carrusel__imagen" src="images_noticias/gareca_libero.webp" alt="">
+                            <img class="carrusel__imagen" src="images_noticias/gareca_libero.webp" alt="" loading="lazy">
                             <div class="carrusel__texto">
                                 <p class="carrusel__fuente">Líbero</p>
                                 <h3 class="carrusel__titulo">Ricardo Gareca opinó sobre las chances de Perú en la Copa América</h3>
@@ -100,7 +105,7 @@
                             </div>
                         </article>
                         <article class="carrusel__diapositiva" hidden>
-                            <img class="carrusel__imagen" src="images_noticias/israel_firma_rpp.webp" alt="">
+                            <img class="carrusel__imagen" src="images_noticias/israel_firma_rpp.webp" alt="" loading="lazy">
                             <div class="carrusel__texto">
                                 <p class="carrusel__fuente">RPP</p>
                                 <h3 class="carrusel__titulo">Israel firmó acuerdo con la Conmebol y se ilusiona con jugar la Copa América</h3>
@@ -108,7 +113,7 @@
                             </div>
                         </article>
                         <article class="carrusel__diapositiva" hidden>
-                            <img class="carrusel__imagen" src="images_noticias/israel_peru21.avif" alt="">
+                            <img class="carrusel__imagen" src="images_noticias/israel_peru21.avif" alt="" loading="lazy">
                             <div class="carrusel__texto">
                                 <p class="carrusel__fuente">TUDN</p>
                                 <h3 class="carrusel__titulo">Israel puede aparecer en la Copa América tras acuerdo de trabajo con Conmebol</h3>
@@ -134,7 +139,7 @@
                     <article class="video">
                         <div class="video__marco">
                             <button class="video__portada" type="button" data-video-id="zUvSh7vWW5I" data-video-titulo="Michelob Ultra, cerveza oficial de la Copa América 2024">
-                                <img src="https://i.ytimg.com/vi/zUvSh7vWW5I/hqdefault.jpg" alt="" loading="lazy">
+                                <img src="https://i.ytimg.com/vi/zUvSh7vWW5I/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
                                 <span class="video__play" aria-hidden="true"></span>
                                 <span class="visualmente-oculto">Reproducir video: Michelob Ultra, cerveza oficial de la Copa América 2024</span>
                             </button>
@@ -144,7 +149,7 @@
                     <article class="video">
                         <div class="video__marco">
                             <button class="video__portada" type="button" data-video-id="XdGtqTK83no" data-video-titulo="Cumbre, la pelota oficial de la Copa América 2024">
-                                <img src="https://i.ytimg.com/vi/XdGtqTK83no/hqdefault.jpg" alt="" loading="lazy">
+                                <img src="https://i.ytimg.com/vi/XdGtqTK83no/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
                                 <span class="video__play" aria-hidden="true"></span>
                                 <span class="visualmente-oculto">Reproducir video: Cumbre, la pelota oficial de la Copa América 2024</span>
                             </button>
@@ -154,7 +159,7 @@
                     <article class="video">
                         <div class="video__marco">
                             <button class="video__portada" type="button" data-video-id="LTaMpMZ-yfE" data-video-titulo="Presentación oficial: inauguración en Atlanta y final en Miami">
-                                <img src="https://i.ytimg.com/vi/LTaMpMZ-yfE/hqdefault.jpg" alt="" loading="lazy">
+                                <img src="https://i.ytimg.com/vi/LTaMpMZ-yfE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
                                 <span class="video__play" aria-hidden="true"></span>
                                 <span class="visualmente-oculto">Reproducir video: Presentación oficial: inauguración en Atlanta y final en Miami</span>
                             </button>
@@ -177,6 +182,7 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="participantes.html">Participantes</a></li>
                 <li><a href="estadios.html">Estadios</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
                     <li><a href="https://github.com/AcuLuis/RepoCopaAmerica" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></li>
                 </ul>
             </div>
@@ -186,6 +192,9 @@
         </div>
     </footer>
 
+    <script src="js/datos.js"></script>
+    <script src="js/torneo.js"></script>
+    <script src="js/ui.js"></script>
     <script src="js/comun.js"></script>
     <script src="js/contador.js"></script>
     <script src="js/carrusel.js"></script>
