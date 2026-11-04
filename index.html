@@ -1,21 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>COPA AMÉRICA 2024</title>
         <link rel = "stylesheet" href="styles.css">
-        <link rel="icon" type="image/jpg" href="/images/icono_copa.jpg" />
+        <link rel="icon" type="image/jpeg" href="images/icono_copa.jpg">
 </head>
 <body>
-    <div>
-        
-    </div>
     <header>
         <h1>COPA AMÉRICA 2024</h1>
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/logo_copa.png">
+                        <img src="images/logo_copa.png" alt="Logo Copa América 2024">
                     </a>
                 </div>
                     <nav>
@@ -36,7 +33,7 @@
 
     <section id="inicio">
         <br>
-        <p class="subti">La Copa América 2024 Inicia en...</p>  
+        <p class="subti" id="tituloContador">La Copa América 2024 inicia en...</p>  
         <div class="container">
             <div class="imagen">
                 <img src="images/logo_copa.png" alt="Logo Copa" width="500px" height="180px">
@@ -57,7 +54,6 @@
         <br> al 14 de julio de 2024</p>
     </div>
     
-    <script src="temporizador.js"></script>
 
     <section id="noticias">
         <br>
@@ -65,19 +61,16 @@
         <br>
 
         <div id="carrusel1">
-            <a href="https://gestion.pe/noticias/copa-america/" target="_blank">
-                <img id="imagen1" src="images_noticias/copa_gestion.avif" alt="Imagen 1">
+            <a id="enlace1" href="https://gestion.pe/noticias/copa-america/" target="_blank" rel="noopener noreferrer">
+                <img id="imagen1" src="images_noticias/copa_gestion.avif" alt="Copa América 2024: últimas noticias (Gestión)">
             </a>
         </div>
-        <script src="noticias.js"></script>
 
         <div id="carrusel2">
-            <a href="https://rpp.pe/futbol/futbol-mundial/conmebol-firmo-acuerdo-con-israel-y-podia-jugar-la-copa-america-noticia-1547258" target="_blank">
-                <img id="imagen2" src="images_noticias/israel_firma_rpp.webp" alt="Imagen 2">
+            <a id="enlace2" href="https://rpp.pe/futbol/futbol-mundial/conmebol-firmo-acuerdo-con-israel-y-podia-jugar-la-copa-america-noticia-1547258" target="_blank" rel="noopener noreferrer">
+                <img id="imagen2" src="images_noticias/israel_firma_rpp.webp" alt="Israel firmó acuerdo con la Conmebol (RPP)">
             </a>
         </div>
-        <script src="noticias.js"></script>
-
     </section>
 
     <section id="videos">
@@ -101,9 +94,11 @@
         </div>
     </section>
 
-</body>
-<br>
 <footer class="referencia">
-    <p>&copy; 2024 Copa América. Todos los derechos reservados. ESAN</p>
+    <p>Proyecto académico (ESAN) con fines informativos. Código bajo licencia MIT.</p>
 </footer>
+
+    <script src="temporizador.js"></script>
+    <script src="noticias.js"></script>
+</body>
 </html>

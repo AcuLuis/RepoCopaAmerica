@@ -13,7 +13,8 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed; /* Fijar el encabezado en la parte superior */
-    width: 98%; /* Ancho completo */
+    width: 100%;
+    box-sizing: border-box;
     top: 0; /* Fijar en la parte superior */
     z-index: 1000; /* Asegurar que esté por encima de otros elementos */
 }
