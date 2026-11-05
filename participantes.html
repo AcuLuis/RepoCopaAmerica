@@ -1,128 +1,107 @@
-
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>COPA AMÉRICA 2024</title>
-        <link rel = "stylesheet" href="styles_participantes.css">
-    </head>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Participantes | Copa América 2024</title>
+    <meta name="description" content="Las 16 selecciones de la Copa América 2024: grupo, director técnico, récord y hasta dónde llegó cada una.">
+    <meta name="theme-color" content="#071a3d">
+    <link rel="canonical" href="https://aculuis.github.io/RepoCopaAmerica/participantes.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="Copa América 2024">
+    <meta property="og:title" content="Participantes | Copa América 2024">
+    <meta property="og:description" content="Las 16 selecciones de la Copa América 2024: grupo, director técnico, récord y hasta dónde llegó cada una.">
+    <meta property="og:url" content="https://aculuis.github.io/RepoCopaAmerica/participantes.html">
+    <meta property="og:image" content="https://aculuis.github.io/RepoCopaAmerica/images/portada.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
 <body>
-    <header>
-        <h1>COPA AMÉRICA 2024</h1>
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo_copa.png">
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <div class="contenedor cabecera__barra">
+            <a class="marca" href="index.html" aria-label="Copa América 2024, ir al inicio">
+                <img src="images/logo_copa.png" alt="Copa América USA 2024" width="140" height="42">
             </a>
+            <button class="menu-boton" type="button" aria-expanded="false" aria-controls="navegacion">
+                <span class="menu-boton__barras" aria-hidden="true"></span>
+                <span>Menú</span>
+            </button>
+            <nav id="navegacion" class="navegacion" aria-label="Principal">
+                <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="participantes.html" aria-current="page">Participantes</a></li>
+                <li><a href="estadios.html">Estadios</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="index.html#noticias">Noticias</a></li>
+                <li><a href="index.html#videos">Videos</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+        <section class="encabezado-pagina">
+            <div class="contenedor">
+                <h1>Países participantes</h1>
+                <p>Las 16 selecciones de la Conmebol y la Concacaf que disputaron la Copa América 2024.</p>
+            </div>
+        </section>
+
+        <section class="seccion" aria-label="Listado de selecciones">
+            <div class="contenedor">
+                <div class="controles">
+                    <div class="filtros" id="filtrosEquipos" role="group" aria-label="Filtrar selecciones">
+                        <button class="filtro" type="button" data-filtro="todos" aria-pressed="true">Todas</button>
+                        <button class="filtro" type="button" data-filtro="grupo-A" aria-pressed="false">Grupo A</button>
+                        <button class="filtro" type="button" data-filtro="grupo-B" aria-pressed="false">Grupo B</button>
+                        <button class="filtro" type="button" data-filtro="grupo-C" aria-pressed="false">Grupo C</button>
+                        <button class="filtro" type="button" data-filtro="grupo-D" aria-pressed="false">Grupo D</button>
+                        <button class="filtro" type="button" data-filtro="conmebol" aria-pressed="false">Conmebol</button>
+                        <button class="filtro" type="button" data-filtro="concacaf" aria-pressed="false">Concacaf</button>
+                    </div>
+                    <label class="campo">
+                        Buscar selección o entrenador
+                        <input type="search" id="buscarEquipo" placeholder="Ej.: Perú, Bielsa" autocomplete="off">
+                    </label>
+                </div>
+                <p class="conteo" id="conteoEquipos" aria-live="polite"></p>
+                <div class="rejilla" id="rejillaEquipos"></div>
+                <noscript>
+                    <p class="sin-resultados">Activa JavaScript en tu navegador para ver este contenido.</p>
+                </noscript>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__contenido">
+                <div>
+                    <p class="pie__titulo">Copa América 2024</p>
+                    <p>Proyecto académico (ESAN) con fines informativos.</p>
+                </div>
+                <ul class="pie__enlaces">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="participantes.html">Participantes</a></li>
                 <li><a href="estadios.html">Estadios</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="participantes"> 
-        <br>
-        <p class="subti">PAÍSES PARTICIPANTES</p>  
-        <br>
-        <table> 
-            <tbody> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Argentina</p> 
-                        <a href="https://www.google.com/search?q=partidos+argentina&rlz=1C1ONGR_esPE1087PE1087&oq=partidos+argentina&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIMCAcQABgUGIcCGIAEMgcICBAAGIAEMgcICRAAGIAEqAIIsAIB&sourceid=chrome&ie=UTF-8" target="_blank">
-                            <img src="images/argentina.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capitán: Lionel Messi</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Brasil</p> 
-                        <a href="https://www.google.com/search?q=partidos+brasil&sca_esv=15ddde8597066206&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn08P8c3DkCoWv7m3_e6uFv_FXMGf6Q%3A1713018689146&ei=QZcaZrzOCMr35OUP94WXoAk&ved=0ahUKEwj88tbzs7-FAxXKO7kGHffCBZQQ4dUDCBA&uact=5&oq=partidos+brasil&gs_lp=Egxnd3Mtd2l6LXNlcnAiD3BhcnRpZG9zIGJyYXNpbDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIuRxQqQJYyBhwAXgBkAECmAGtBaAB9hKqAQoxMi4zLTEuMS4xuAEDyAEA-AEBmAIOoALDC8ICChAAGEcY1gQYsAPCAg0QABiABBiKBRhDGLADwgIOEAAY5AIY1gQYsAPYAQHCAhMQLhiABBiKBRhDGMgDGLAD2AECwgIKEC4YgAQYigUYQ8ICChAAGIAEGIoFGEPCAgoQABiABBgUGIcCwgIZEC4YgAQYigUYQxiXBRjcBBjeBBjgBNgBA8ICChAjGIAEGIoFGCfCAggQLhjUAhiABMICEBAAGIAEGBQYhwIYsQMYgwHCAggQABiABBixA8ICCxAAGIAEGLEDGIMBmAMAiAYBkAYRugYGCAEQARgJugYGCAIQARgIugYGCAMQARgUkgcIMTAuMy4wLjGgB6l5&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images/brasil.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capitán: Neymar Jr.</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Perú</p>
-                        <a href="https://www.google.com/search?q=peru+partidos&sca_esv=15ddde8597066206&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn09_dg6kTzyim4I7ApM_ZIQutI_-aQ%3A1713018760335&ei=iJcaZreRFJ2V5OUP0c6iwAE&ved=0ahUKEwi39c-VtL-FAxWdCrkGHVGnCBgQ4dUDCBA&uact=5&oq=peru+partidos&gs_lp=Egxnd3Mtd2l6LXNlcnAiDXBlcnUgcGFydGlkb3MyDRAAGIAEGIoFGEMYsQMyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgoQABiABBiKBRhDMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEiKK1CvDFjNJXADeAGQAQCYAYUBoAHgCaoBAzguNbgBA8gBAPgBAZgCEKACiAuoAhTCAgoQABhHGNYEGLADwgINEAAYgAQYigUYQxiwA8ICExAuGIAEGIoFGEMYyAMYsAPYAQHCAgcQIxjqAhgnwgIWEAAYAxiPARjlAhjqAhi0AhiMA9gBAsICFhAuGAMYjwEY5QIY6gIYtAIYjAPYAQLCAgoQIxiABBiKBRgnwgIKEC4YgAQYigUYJ8ICChAuGIAEGIoFGEPCAhAQABiABBiKBRhDGLEDGIMBwgINEC4YgAQYigUYQxixA8ICCxAAGIAEGLEDGIMBwgINEAAYgAQYFBiHAhixA8ICChAAGIAEGBQYhwLCAgsQLhiABBjHARivAcICBxAAGIAEGArCAgUQLhiABJgDFYgGAZAGC7oGBAgBGAi6BgYIAhABGAuSBwM3LjmgB6Bv&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images/bandera_peru.png" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capitán: Gianluca Lapadula</p> 
-                    </td> 
-                </tr> 
-            </tbody> 
-        </table> 
-        <table> 
-            <tbody> 
-                <tr class="pais">  
-                    <td> 
-                        <p class="caption-top">Colombia</p> 
-                        <a href="https://www.google.com/search?q=colombia+partidos&sca_esv=15ddde8597066206&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn0_Bs671FbsIiHHd79n3uASQUeb4cg%3A1713018955502&ei=S5gaZsOYHoO35OUP1til2A8&oq=colombia+part&gs_lp=Egxnd3Mtd2l6LXNlcnAiDWNvbG9tYmlhIHBhcnQqAggAMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIKEAAYgAQYFBiHAkiyIlCRBVjWGHABeAGQAQCYAWqgAcoJqgEDOS40uAEDyAEA-AEBmAIOoALYCqgCEsICBxAjGOoCGCfCAhMQABiABBiKBRhDGOoCGLQC2AEBwgIWEC4YQxiABBiKBRjIAxjqAhi0AtgBAsICFhAuGIAEGIoFGEMYyAMY6gIYtALYAQLCAgoQIxiABBiKBRgnwgIQEC4YgAQYigUYQxixAxiDAcICChAuGIAEGIoFGEPCAggQABiABBixA8ICDRAAGIAEGIoFGEMYsQPCAg0QLhiABBiKBRhDGLEDwgILEAAYgAQYigUYsQPCAgsQLhiDARixAxiABMICBRAuGIAEwgILEAAYgAQYsQMYgwHCAgsQLhiABBjHARivAZgDGroGBggBEAEYAboGBggCEAEYCJIHAzYuOKAH44YB&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images/colombia.png" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capitán: James Rodriguez</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Paraguay</p> 
-                        <a href="https://www.google.com/search?q=paraguay+partidos&sca_esv=15ddde8597066206&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn0-u_T3laI2xsUpBEQJ2HosQ1_kkBw%3A1713019099772&ei=25gaZvzoLqae5OUP4L6BkAI&ved=0ahUKEwi8wr23tb-FAxUmD7kGHWBfACIQ4dUDCBA&uact=5&oq=paraguay+partidos&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXBhcmFndWF5IHBhcnRpZG9zMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5I_RZQqQNYwRRwAXgBkAEAmAFloAGEB6oBAzkuMbgBA8gBAPgBAZgCC6AC_QfCAgoQABhHGNYEGLADwgINEAAYgAQYigUYQxiwA8ICDhAAGOQCGNYEGLAD2AEBwgITEC4YgAQYigUYQxjIAxiwA9gBAsICChAjGIAEGIoFGCfCAgoQABiABBiKBRhDwgIFEC4YgATCAgsQLhiDARixAxiABMICGhAuGIMBGLEDGIAEGJcFGNwEGN4EGOAE2AEDwgIKEAAYgAQYFBiHApgDAIgGAZAGEroGBggBEAEYCboGBggCEAEYCLoGBggDEAEYFJIHAzguM6AHtUY&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images/paraguay.png" width="300px" height="200px"> 
-                        </a>
-                        <p class="caption-bottom">Capitán: Gustavo Gómez</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Venezuela</p> 
-                        <a href="https://www.google.com/search?q=venezuela+partidos&sca_esv=15ddde8597066206&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn09lWzCquEK1mC0j7qiuk-AEBH18dQ%3A1713019089745&ei=0ZgaZt6MLdi05OUPnpS6uAk&ved=0ahUKEwieudmytb-FAxVYGrkGHR6KDpcQ4dUDCBA&uact=5&oq=venezuela+partidos&gs_lp=Egxnd3Mtd2l6LXNlcnAiEnZlbmV6dWVsYSBwYXJ0aWRvczIKEAAYgAQYigUYQzIFEAAYgAQyBRAuGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEjQJVDTBlj4InABeAGQAQOYAe0EoAHXGqoBCzUuNi4zLjEuMS4xuAEDyAEA-AEBmAIPoAKcEKgCFMICBxAjGOoCGCfCAhMQABiABBiKBRhDGOoCGLQC2AEBwgITEC4YgAQYigUYQxjqAhi0AtgBAcICBBAjGCfCAgoQIxiABBiKBRgnwgIKEC4YgAQYigUYQ8ICDRAAGIAEGIoFGEMYsQPCAhAQLhiABBiKBRhDGLEDGIMBwgIKEAAYgAQYFBiHAsICDRAuGIAEGIoFGEMYsQPCAggQLhiABBixA8ICCxAuGIAEGLEDGIMBwgILEAAYgAQYsQMYgwGYAxm6BgYIARABGAGSBwYyLjEwLjOgB_ypAQ&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images/venezuela.png" width="300px" height="200px"> 
-                        </a>
-                        <p class="caption-bottom">Capitán: Salomón Rondón</p> 
-                    </td> 
-                </tr> 
-            </tbody>
-        </table> 
-        <table> 
-            <tbody> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Uruguay</p>
-                        <a href="https://www.google.com/search?q=uruguay+partidos&sca_esv=15ddde8597066206&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn0-Tg1kisXgTI9K0o3W2FRHM75W46Q%3A1713019179339&ei=K5kaZuivFJax5OUPpsyjCA&oq=uruaguy+pa&gs_lp=Egxnd3Mtd2l6LXNlcnAiCnVydWFndXkgcGEqAggBMgcQLhgNGIAEMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNSOQpULcFWOgWcAF4AZABAJgBjgGgAeAIqgEDMS45uAEDyAEA-AEBmAINoAK9KKgCEcICBxAjGOoCGCfCAhMQABiABBiKBRhDGOoCGLQC2AEBwgIWEC4YQxiABBiKBRjIAxjqAhi0AtgBAsICFhAuGIAEGIoFGEMYyAMY6gIYtALYAQLCAgQQIxgnwgIKECMYgAQYigUYJ8ICChAAGIAEGIoFGEPCAgsQLhiABBixAxiDAcICCxAAGIAEGLEDGIMBwgIKEC4YgAQYigUYQ8ICBRAAGIAEwgIFEC4YgATCAgcQABiABBgKwgINEC4YgAQYChixAxjUAsICBxAuGIAEGArCAgoQABiABBgNGLEDwgINEC4YDRiDARixAxiABMICBxAuGIAEGA3CAg0QABiABBgNGLEDGIMBwgIWEC4YgAQYDRiXBRjcBBjeBBjgBNgBA8ICFhAuGA0YgAQYlwUY3AQY3gQY4ATYAQOYAyG6BgYIARABGAG6BgYIAhABGAi6BgYIAxABGBSSBwgxLjEwLjctMqAH0mI&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images/uruguay.png" width="300px" height="200px"> 
-                        </a> 
-                        <p class="caption-bottom">Capitán: Luis Suárez</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Chile</p>
-                        <a href="https://www.google.com/search?q=chile+partidos&sca_esv=15ddde8597066206&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn09JwqtjwUNIWPt7nTXkZePDYPN7Wg%3A1713019223740&ei=V5kaZqXfLI2J5OUPruqr4AY&ved=0ahUKEwjl5svytb-FAxWNBLkGHS71CmwQ4dUDCBA&uact=5&oq=chile+partidos&gs_lp=Egxnd3Mtd2l6LXNlcnAiDmNoaWxlIHBhcnRpZG9zMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgUQABiABDIFEAAYgAQyBRAAGIAEMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgUQLhiABDIFEAAYgAQyBRAAGIAESNAaUKQEWNoXcAF4AZABAJgBiwGgAa0LqgEDOC42uAEDyAEA-AEBmAIPoALuDKgCEcICBxAjGOoCGCfCAhMQABiABBiKBRhDGOoCGLQC2AEBwgIWEC4YQxiABBiKBRjIAxjqAhi0AtgBAsICFhAuGIAEGIoFGEMYyAMY6gIYtALYAQLCAgoQIxiABBiKBRgnwgIKEC4YgAQYigUYQ8ICEBAuGEMYgwEYsQMYgAQYigXCAg0QABiABBiKBRhDGLEDwgINEC4YgAQYigUYQxixA8ICEBAAGIAEGIoFGEMYsQMYgwHCAgsQLhiDARixAxiABMICCxAuGIAEGLEDGIMBwgIIEAAYgAQYsQPCAgoQABiABBgUGIcCmAMdugYGCAEQARgBugYGCAIQARgIkgcENS4xMKAH0Xk&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images/chile.png" width="300px" height="200px"> 
-                        </a> 
-                        <p class="caption-bottom">Capitán: Claudio Bravo</p> 
-                    </td> 
-                </tr> 
-                <tr class="pais"> 
-                    <td> 
-                        <p class="caption-top">Bolivia</p> 
-                        <a href="https://www.google.com/search?q=bolivia+partidos&sca_esv=15ddde8597066206&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn08mFtMsIP7hk1aXig6AGs9MueGLIw%3A1713019283006&ei=k5kaZooFxdXk5Q_t-YeYBA&ved=0ahUKEwjKmu2Otr-FAxXFKrkGHe38AUMQ4dUDCBA&uact=5&oq=bolivia+partidos&gs_lp=Egxnd3Mtd2l6LXNlcnAiEGJvbGl2aWEgcGFydGlkb3MyBRAAGIAEMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSMIXUMUBWNYUcAF4AZABAJgBgAGgAagJqgEDNi42uAEDyAEA-AEBmAINoAKACsICChAAGEcY1gQYsAPCAg0QABiABBiKBRhDGLADwgIHEAAYgAQYDcICBxAjGLACGCfCAgoQIxiABBiKBRgnwgIQEAAYgAQYigUYQxixAxiDAcICChAAGIAEGIoFGEPCAg0QABiABBiKBRhDGLEDmAMAiAYBkAYKkgcDNi43oAe4VA&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images/bolivia.png" width="300px" height="200px"> 
-                        </a>
-                        <p class="caption-bottom">Capitán: Marcelo Martins</p> 
-                    </td> 
-                </tr> 
-            </tbody>
-        </table> 
-    </section>
+                <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="https://github.com/AcuLuis/RepoCopaAmerica" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></li>
+                </ul>
+            </div>
+            <div class="pie__legal">
+                <p>Código bajo licencia MIT. Los nombres, logotipos e imágenes pertenecen a sus respectivos titulares.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/torneo.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/participantes.js"></script>
 </body>
-<footer class="abajo">
-    <p>&copy; 2024 Copa Amèrica. Todos los derechos reservados. ESAN</p>
-</footer>
 </html>

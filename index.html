@@ -1,109 +1,216 @@
-
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>COPA AMÉRICA 2024</title>
-        <link rel = "stylesheet" href="styles.css">
-        <link rel="icon" type="image/jpg" href="/images/icono_copa.jpg" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Copa América 2024</title>
+    <meta name="description" content="Sitio informativo de la Copa América 2024: campeón, resultados, noticias, videos, selecciones y estadios del torneo jugado en Estados Unidos.">
+    <meta name="theme-color" content="#071a3d">
+    <link rel="canonical" href="https://aculuis.github.io/RepoCopaAmerica/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="Copa América 2024">
+    <meta property="og:title" content="Copa América 2024">
+    <meta property="og:description" content="Sitio informativo de la Copa América 2024: campeón, resultados, noticias, videos, selecciones y estadios del torneo jugado en Estados Unidos.">
+    <meta property="og:url" content="https://aculuis.github.io/RepoCopaAmerica/">
+    <meta property="og:image" content="https://aculuis.github.io/RepoCopaAmerica/images/portada.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <div>
-        
-    </div>
-    <header>
-        <h1>COPA AMÉRICA 2024</h1>
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo_copa.png">
-                    </a>
-                </div>
-                    <nav>
-                        <ul>
-                                <li><a href="index.html">Inicio</a></li>
-                                <li><a href="participantes.html">Participantes</a></li>
-                                <li><a href="estadios.html">Estadios</a></li>
-                                <li><a href="#noticias">Noticias</a></li>
-                                <li><a href="#videos">Videos</a></li>
-                        </ul>
-                    </nav>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <div class="contenedor cabecera__barra">
+            <a class="marca" href="index.html" aria-label="Copa América 2024, ir al inicio">
+                <img src="images/logo_copa.png" alt="Copa América USA 2024" width="140" height="42">
+            </a>
+            <button class="menu-boton" type="button" aria-expanded="false" aria-controls="navegacion">
+                <span class="menu-boton__barras" aria-hidden="true"></span>
+                <span>Menú</span>
+            </button>
+            <nav id="navegacion" class="navegacion" aria-label="Principal">
+                <ul>
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
+                <li><a href="participantes.html">Participantes</a></li>
+                <li><a href="estadios.html">Estadios</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="index.html#noticias">Noticias</a></li>
+                <li><a href="index.html#videos">Videos</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="entrada">
-        <img src="images/fondo_entrada.png" width="1333px" height="500px">
-    </section>
-    <br>
+    <main id="contenido" tabindex="-1">
+        <h1 class="visualmente-oculto">Copa América 2024</h1>
 
-    <section id="inicio">
-        <br>
-        <p class="subti">La Copa América 2024 Inicia en...</p>  
-        <div class="container">
-            <div class="imagen">
-                <img src="images/logo_copa.png" alt="Logo Copa" width="500px" height="180px">
+        <section class="portada" aria-label="Portada">
+            <img src="images/portada.jpg" alt="Copa América USA 2024: Siente la grandeza" width="1200" height="600" fetchpriority="high">
+        </section>
+
+        <section class="seccion" aria-labelledby="tituloContador">
+            <div class="contenedor">
+                <h2 class="seccion__titulo" id="tituloContador">Copa América 2024</h2>
+                <div class="contador" data-contador hidden>
+                    <div class="contador__unidad"><span class="contador__valor" data-unidad="dias">0</span><span class="contador__etiqueta">Días</span></div>
+                    <div class="contador__unidad"><span class="contador__valor" data-unidad="horas">00</span><span class="contador__etiqueta">Horas</span></div>
+                    <div class="contador__unidad"><span class="contador__valor" data-unidad="minutos">00</span><span class="contador__etiqueta">Minutos</span></div>
+                    <div class="contador__unidad"><span class="contador__valor" data-unidad="segundos">00</span><span class="contador__etiqueta">Segundos</span></div>
+                </div>
+                <div class="aviso" data-contador-aviso hidden>
+                    <p class="aviso__titulo" data-aviso-titulo></p>
+                    <p data-aviso-detalle></p>
+                    <div class="aviso__extra" data-aviso-extra></div>
+                </div>
+                <div data-contador-partidos hidden></div>
             </div>
-            <div class="temporizador">
-                <div id="contador"></div>
+        </section>
+
+        <section class="seccion seccion--blanca" id="presentacion" aria-labelledby="tituloPresentacion">
+            <div class="contenedor">
+                <h2 class="seccion__titulo" id="tituloPresentacion">Presentación</h2>
+                <p class="texto-presentacion">
+                    La Copa América 2024 es la 48.ª edición de la principal competencia de selecciones de
+                    América del Sur y la más antigua del mundo. Fue coorganizada por la Confederación
+                    Sudamericana de Fútbol (Conmebol) y la Confederación de Norteamérica, Centroamérica y el
+                    Caribe de Fútbol (Concacaf), y se disputó en Estados Unidos por segunda vez desde la
+                    edición Centenario de 2016, del 20 de junio al 14 de julio de 2024.
+                </p>
+                <ul class="cifras">
+                    <li class="cifra" data-cifra="equipos"><strong>16</strong><span>selecciones</span></li>
+                    <li class="cifra" data-cifra="estadios"><strong>14</strong><span>estadios</span></li>
+                    <li class="cifra" data-cifra="partidos"><strong>32</strong><span>partidos</span></li>
+                    <li class="cifra" data-cifra="goles"><strong>25</strong><span>días de competencia</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion" id="noticias" aria-labelledby="tituloNoticias">
+            <div class="contenedor">
+                <h2 class="seccion__titulo" id="tituloNoticias">Noticias</h2>
+                <p class="seccion__intro">Lo más comentado en la previa del torneo.</p>
+                <div class="carrusel" data-carrusel role="region" aria-roledescription="carrusel" aria-label="Noticias destacadas">
+                    <div class="carrusel__ventana" aria-live="off">
+                        <article class="carrusel__diapositiva">
+                            <img class="carrusel__imagen" src="images_noticias/copa_gestion.avif" alt="" loading="lazy">
+                            <div class="carrusel__texto">
+                                <p class="carrusel__fuente">Gestión</p>
+                                <h3 class="carrusel__titulo">Copa América 2024: toda la cobertura del torneo</h3>
+                                <a class="boton" href="https://gestion.pe/noticias/copa-america/" target="_blank" rel="noopener noreferrer">Leer la nota<span class="visualmente-oculto"> en Gestión (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </article>
+                        <article class="carrusel__diapositiva" hidden>
+                            <img class="carrusel__imagen" src="images_noticias/gareca_infobae.avif" alt="" loading="lazy">
+                            <div class="carrusel__texto">
+                                <p class="carrusel__fuente">Soccerway</p>
+                                <h3 class="carrusel__titulo">Gareca, entrenador de Chile, se reencuentra con Perú en la Copa América</h3>
+                                <a class="boton" href="https://es.soccerway.com/noticias/futbol-copa-america-gareca-entrenador-de-chile-se-reencuentra-con-peru-en-la-copa-america/OpVxirAD" target="_blank" rel="noopener noreferrer">Leer la nota<span class="visualmente-oculto"> en Soccerway (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </article>
+                        <article class="carrusel__diapositiva" hidden>
+                            <img class="carrusel__imagen" src="images_noticias/gareca_libero.webp" alt="" loading="lazy">
+                            <div class="carrusel__texto">
+                                <p class="carrusel__fuente">Líbero</p>
+                                <h3 class="carrusel__titulo">Ricardo Gareca opinó sobre las chances de Perú en la Copa América</h3>
+                                <a class="boton" href="https://libero.pe/futbol-internacional/copa-america/2024/04/10/peru-tiene-chances-ganar-copa-america-ricardo-gareca-sorprendio-pronostico-666870" target="_blank" rel="noopener noreferrer">Leer la nota<span class="visualmente-oculto"> en Líbero (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </article>
+                        <article class="carrusel__diapositiva" hidden>
+                            <img class="carrusel__imagen" src="images_noticias/israel_firma_rpp.webp" alt="" loading="lazy">
+                            <div class="carrusel__texto">
+                                <p class="carrusel__fuente">RPP</p>
+                                <h3 class="carrusel__titulo">Israel firmó acuerdo con la Conmebol y se ilusiona con jugar la Copa América</h3>
+                                <a class="boton" href="https://rpp.pe/futbol/futbol-mundial/conmebol-firmo-acuerdo-con-israel-y-podia-jugar-la-copa-america-noticia-1547258" target="_blank" rel="noopener noreferrer">Leer la nota<span class="visualmente-oculto"> en RPP (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </article>
+                        <article class="carrusel__diapositiva" hidden>
+                            <img class="carrusel__imagen" src="images_noticias/israel_peru21.avif" alt="" loading="lazy">
+                            <div class="carrusel__texto">
+                                <p class="carrusel__fuente">TUDN</p>
+                                <h3 class="carrusel__titulo">Israel puede aparecer en la Copa América tras acuerdo de trabajo con Conmebol</h3>
+                                <a class="boton" href="https://www.tudn.com/futbol/copa-america/israel-firma-acuerdo-trabajo-conmebol-puede-participar-copa-america" target="_blank" rel="noopener noreferrer">Leer la nota<span class="visualmente-oculto"> en TUDN (se abre en una pestaña nueva)</span></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="carrusel__barra">
+                        <button class="boton-circular" type="button" data-accion="anterior" aria-label="Noticia anterior">&lsaquo;</button>
+                        <div class="carrusel__puntos"></div>
+                        <button class="boton-circular" type="button" data-accion="siguiente" aria-label="Noticia siguiente">&rsaquo;</button>
+                        <button class="boton-circular boton-circular--texto" type="button" data-accion="pausa" aria-pressed="false">Pausar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion--blanca" id="videos" aria-labelledby="tituloVideos">
+            <div class="contenedor">
+                <h2 class="seccion__titulo" id="tituloVideos">Videos</h2>
+                <p class="seccion__intro">Material oficial del torneo. El video se carga al pulsar reproducir.</p>
+                <div class="videos">
+                    <article class="video">
+                        <div class="video__marco">
+                            <button class="video__portada" type="button" data-video-id="zUvSh7vWW5I" data-video-titulo="Michelob Ultra, cerveza oficial de la Copa América 2024">
+                                <img src="https://i.ytimg.com/vi/zUvSh7vWW5I/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+                                <span class="video__play" aria-hidden="true"></span>
+                                <span class="visualmente-oculto">Reproducir video: Michelob Ultra, cerveza oficial de la Copa América 2024</span>
+                            </button>
+                        </div>
+                        <h3 class="video__titulo">Michelob Ultra, cerveza oficial de la Copa América 2024</h3>
+                    </article>
+                    <article class="video">
+                        <div class="video__marco">
+                            <button class="video__portada" type="button" data-video-id="XdGtqTK83no" data-video-titulo="Cumbre, la pelota oficial de la Copa América 2024">
+                                <img src="https://i.ytimg.com/vi/XdGtqTK83no/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+                                <span class="video__play" aria-hidden="true"></span>
+                                <span class="visualmente-oculto">Reproducir video: Cumbre, la pelota oficial de la Copa América 2024</span>
+                            </button>
+                        </div>
+                        <h3 class="video__titulo">Cumbre, la pelota oficial de la Copa América 2024</h3>
+                    </article>
+                    <article class="video">
+                        <div class="video__marco">
+                            <button class="video__portada" type="button" data-video-id="LTaMpMZ-yfE" data-video-titulo="Presentación oficial: inauguración en Atlanta y final en Miami">
+                                <img src="https://i.ytimg.com/vi/LTaMpMZ-yfE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+                                <span class="video__play" aria-hidden="true"></span>
+                                <span class="visualmente-oculto">Reproducir video: Presentación oficial: inauguración en Atlanta y final en Miami</span>
+                            </button>
+                        </div>
+                        <h3 class="video__titulo">Presentación oficial: inauguración en Atlanta y final en Miami</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__contenido">
+                <div>
+                    <p class="pie__titulo">Copa América 2024</p>
+                    <p>Proyecto académico (ESAN) con fines informativos.</p>
+                </div>
+                <ul class="pie__enlaces">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="participantes.html">Participantes</a></li>
+                <li><a href="estadios.html">Estadios</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="https://github.com/AcuLuis/RepoCopaAmerica" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></li>
+                </ul>
+            </div>
+            <div class="pie__legal">
+                <p>Código bajo licencia MIT. Los nombres, logotipos e imágenes pertenecen a sus respectivos titulares.</p>
             </div>
         </div>
-    </section>
-    <br>
-    <p class="subti">PRESENTACIÓN</p> 
-    <div id="seccionTexto">
-        <p>La Copa América 2024 será la 48.ª edición de este torneo, la principal competencia futbolística 
-        <br>entre las selecciones nacionales de América del Sur y la más antigua del mundo, será coorganizada 
-        <br>por la Confederación Sudamericana de Fútbol (Conmebol) y la Confederación de Norteamérica, 
-        <br>Centroamérica y el Caribe de Fútbol (Concacaf). Por segunda vez el torneo se realizará en 
-        <br>Estados Unidos desde la última vez en la edición centenario de 2016, será disputada del 20 de junio
-        <br> al 14 de julio de 2024</p>
-    </div>
-    
-    <script src="temporizador.js"></script>
+    </footer>
 
-    <section id="noticias">
-        <br>
-        <p class="subti">NOTICIAS</p>  
-        <br>
-
-        <div id="carrusel1">
-            <a href="https://gestion.pe/noticias/copa-america/" target="_blank">
-                <img id="imagen1" src="images_noticias/copa_gestion.avif" alt="Imagen 1">
-            </a>
-        </div>
-        <script src="noticias.js"></script>
-
-        <div id="carrusel2">
-            <a href="https://rpp.pe/futbol/futbol-mundial/conmebol-firmo-acuerdo-con-israel-y-podia-jugar-la-copa-america-noticia-1547258" target="_blank">
-                <img id="imagen2" src="images_noticias/israel_firma_rpp.webp" alt="Imagen 2">
-            </a>
-        </div>
-        <script src="noticias.js"></script>
-
-    </section>
-
-    <section id="videos">
-        <br>
-        <p class="subti">VIDEOS</p>  
-        <br>
-        <div class="video1">
-            <iframe width="440" height="315" src="https://www.youtube.com/embed/zUvSh7vWW5I?si=gMMCg-bOR_2pp9UJ" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="video2">
-            <iframe width="440" height="315" src="https://www.youtube.com/embed/XdGtqTK83no?si=tz8DSrJZBrBcpUV8" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="video3">
-            <iframe width="440" height="315" src="https://www.youtube.com/embed/LTaMpMZ-yfE?si=bxtWuS87KHgE6jmy" title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen></iframe>
-        </div>
-    </section>
-
+    <script src="js/datos.js"></script>
+    <script src="js/torneo.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/contador.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="js/videos.js"></script>
 </body>
-<br>
-<footer class="referencia">
-    <p>&copy; 2024 Copa América. Todos los derechos reservados. ESAN</p>
-</footer>
 </html>

@@ -1,161 +1,107 @@
-
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>COPA AMÉRICA 2024</title>
-        <link rel = "stylesheet" href="styles_estadios.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estadios | Copa América 2024</title>
+    <meta name="description" content="Los 14 estadios de la Copa América 2024 en Estados Unidos: ciudad, capacidad y partidos que se jugaron en cada uno.">
+    <meta name="theme-color" content="#071a3d">
+    <link rel="canonical" href="https://aculuis.github.io/RepoCopaAmerica/estadios.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="Copa América 2024">
+    <meta property="og:title" content="Estadios | Copa América 2024">
+    <meta property="og:description" content="Los 14 estadios de la Copa América 2024 en Estados Unidos: ciudad, capacidad y partidos que se jugaron en cada uno.">
+    <meta property="og:url" content="https://aculuis.github.io/RepoCopaAmerica/estadios.html">
+    <meta property="og:image" content="https://aculuis.github.io/RepoCopaAmerica/images/portada.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
-    <header>
-        <h1>COPA AMÉRICA 2024</h1>
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo_copa.png">
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <div class="contenedor cabecera__barra">
+            <a class="marca" href="index.html" aria-label="Copa América 2024, ir al inicio">
+                <img src="images/logo_copa.png" alt="Copa América USA 2024" width="140" height="42">
             </a>
+            <button class="menu-boton" type="button" aria-expanded="false" aria-controls="navegacion">
+                <span class="menu-boton__barras" aria-hidden="true"></span>
+                <span>Menú</span>
+            </button>
+            <nav id="navegacion" class="navegacion" aria-label="Principal">
+                <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="participantes.html">Participantes</a></li>
+                <li><a href="estadios.html" aria-current="page">Estadios</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="index.html#noticias">Noticias</a></li>
+                <li><a href="index.html#videos">Videos</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+        <section class="encabezado-pagina">
+            <div class="contenedor">
+                <h1>Estadios</h1>
+                <p>Los 14 estadios de Estados Unidos que recibieron los partidos del torneo.</p>
+            </div>
+        </section>
+
+        <section class="seccion" aria-label="Listado de estadios">
+            <div class="contenedor">
+                <div class="controles">
+                    <label class="campo">
+                        Buscar por estadio, ciudad o estado
+                        <input type="search" id="buscarEstadio" placeholder="Ej.: Texas, Miami" autocomplete="off">
+                    </label>
+                    <label class="campo">
+                        Ordenar por
+                        <select id="ordenEstadios">
+                            <option value="capacidad-desc">Mayor capacidad</option>
+                            <option value="capacidad-asc">Menor capacidad</option>
+                            <option value="partidos">Más partidos</option>
+                            <option value="nombre">Nombre (A-Z)</option>
+                        </select>
+                    </label>
+                </div>
+                <p class="conteo" id="conteoEstadios" aria-live="polite"></p>
+                <div class="rejilla" id="rejillaEstadios"></div>
+                <noscript>
+                    <p class="sin-resultados">Activa JavaScript en tu navegador para ver este contenido.</p>
+                </noscript>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__contenido">
+                <div>
+                    <p class="pie__titulo">Copa América 2024</p>
+                    <p>Proyecto académico (ESAN) con fines informativos.</p>
+                </div>
+                <ul class="pie__enlaces">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="participantes.html">Participantes</a></li>
                 <li><a href="estadios.html">Estadios</a></li>
-            </ul>
-        </nav>
-    </header>
+                <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="https://github.com/AcuLuis/RepoCopaAmerica" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></li>
+                </ul>
+            </div>
+            <div class="pie__legal">
+                <p>Código bajo licencia MIT. Los nombres, logotipos e imágenes pertenecen a sus respectivos titulares.</p>
+            </div>
+        </div>
+    </footer>
 
-    <section id="estadios">
-        <br>
-        <p class="subti">ESTADIOS</p>  
-        <br>
-        <table> 
-            <tbody> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">Allegiant Stadium</p> 
-                        <a href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0TDbNNU8qLC82YLRSNaiwMEi2SDY1MDUxTbJITkm0tDKoSDQ1tEyxTDUzS0xMMbJMtvQSTMzJSU3PTMwrUSguSUzJLM0FAAlJFnQ&q=allegiant+stadium&rlz=1C1ONGR_esPE1087PE1087&oq=allegia&gs_lcrp=EgZjaHJvbWUqEggCEC4YQxivARjHARiABBiKBTIKCAAQABjjAhiABDINCAEQLhjHARjRAxiABDISCAIQLhhDGK8BGMcBGIAEGIoFMgYIAxBFGDkyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEC4YgAQyBwgHEAAYgAQyBwgIEC4YgAQyBwgJEAAYgATSAQg5MjAxajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" target="_blank">
-                            <img src="images_estadios/allegiant_stadium.jpg" width="300px" height="200px">
-                        </a>
-                        <p class="caption-bottom">Capacidad: 65,000 personas</p> 
-                    </td> 
-                </tr > 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">AT&T Stadium</p> 
-                        <a href="https://www.google.com/search?q=AT%26T+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn08TYvHIJmHQRo8dJW18X8xcNDzdqA%3A1712991348345&ei=dCwaZvfeFOe55OUPgf-n0Ak&ved=0ahUKEwj36MiGzr6FAxXnHLkGHYH_CZoQ4dUDCBA&uact=5&oq=AT%26T+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiDEFUJlQgU3RhZGl1bTITEC4YQxivARjHARixAxiABBiKBTIKEAAYgAQYigUYQzIFEAAYgAQyChAAGIAEGIoFGEMyBRAAGIAEMgUQABiABDIKEAAYgAQYigUYQzIFEAAYgAQyBRAAGIAEMgUQABiABDIiEC4YQxivARjHARixAxiABBiKBRiXBRjcBBjeBBjgBNgBAki1EFDMDFjMDHABeAGQAQCYAVegAVeqAQExuAEDyAEA-AEB-AECmAICoAJuqAISwgIHEC4Y6gIYJ8ICBxAjGOoCGCfCAhwQLhiABBiKBRhDGMcBGK8BGMgDGOoCGLQC2AEBmAMLugYGCAEQARgIugYGCAIQARgUkgcBMqAHhAk&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/AT&T_stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 80,000 personas</p> 
-                    </td> 
-                </tr> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">Bank of America Stadium</p> 
-                        <a href="https://www.google.com/search?q=Bank+of+America+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn08F2ALgj_HBepUf-tEg_56UcmSGkg%3A1712991472527&ei=8CwaZpztH46C5OUP--Sc8Ak&ved=0ahUKEwicpeTBzr6FAxUOAbkGHXsyB54Q4dUDCBA&uact=5&oq=Bank+of+America+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiF0Jhbmsgb2YgQW1lcmljYSBTdGFkaXVtMgQQIxgnMhAQLhiABBiKBRhDGMcBGK8BMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyChAAGIAEGIoFGEMyBRAAGIAEMgUQABiABEjmDVCcC1icC3ABeAGQAQCYAVigAViqAQExuAEDyAEA-AEB-AECmAICoAJqqAISwgIHEC4Y6gIYJ8ICBxAjGOoCGCfCAg0QLhivARjHARjqAhgnwgIcEC4YgAQYigUYQxjHARivARjIAxjqAhi0AtgBAcICHBAuGEMYrwEYxwEYgAQYigUYyAMY6gIYtALYAQGYAw26BgYIARABGAiSBwEyoAfJCg&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/bank_of_america_stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 74,867 personas</p> 
-                    </td> 
-                </tr> 
-            </tbody>
-        </table> 
-        <table> 
-            <tbody> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">Geha Field at Arrowead Stadium</p> 
-                        <a href="https://www.google.com/search?q=Geha+Field+at+Arrowead+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn09Frgp6T2TxLPo5o9yUaQxQ-FkwDA%3A1712991597567&ei=bS0aZpCrIoaL5OUPktOb6AQ&ved=0ahUKEwjQlbT9zr6FAxWGBbkGHZLpBk0Q4dUDCBA&uact=5&oq=Geha+Field+at+Arrowead+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiHkdlaGEgRmllbGQgYXQgQXJyb3dlYWQgU3RhZGl1bTIHECMYsAIYJzIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIGEAAYHhgNMgYQABgeGA0yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5I5okGUOyGBljshgZwAngBkAEAmAFloAFlqgEDMC4xuAEDyAEA-AEB-AECmAIDoAJ6qAIQwgIHECMY6gIYJ8ICDRAuGMcBGK8BGOoCGCfCAgcQLhjqAhgnwgIcEC4YgAQYigUYQxjHARivARjIAxjqAhi0AtgBAcICFhAuGIAEGIoFGEMYyAMY6gIYtALYAQGYAwu6BgYIARABGAiSBwMyLjGgB_IL&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/geha_field_at_arrowead_stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 76,416 personas</p> 
-                    </td> 
-                </tr> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">Hard Rock Stadium</p> 
-                        <a href="https://www.google.com/search?q=Hard+Rock+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn09tEmLHU9MV2YN2yfd0Guj58lUjSw%3A1712991735923&ei=9y0aZtL7N9fy5OUPksitiAY&ved=0ahUKEwiS07C_z76FAxVXObkGHRJkC2EQ4dUDCBA&uact=5&oq=Hard+Rock+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiEUhhcmQgUm9jayBTdGFkaXVtMgoQIxiABBiKBRgnMhMQLhhDGK8BGMcBGLEDGIAEGIoFMgoQABiABBiKBRhDMgUQABiABDIKEAAYgAQYFBiHAjIFEAAYgAQyChAAGIAEGIoFGEMyBRAAGIAEMgUQABiABDIFEAAYgARImw1QlApYlApwAXgBkAEAmAFfoAFfqgEBMbgBA8gBAPgBAfgBApgCAqACcqgCEsICBxAjGOoCGCfCAg0QLhivARjHARjqAhgnwgIHEC4Y6gIYJ8ICHBAuGIAEGIoFGEMYxwEY0QMYyAMY6gIYtALYAQHCAhwQLhiABBiKBRhDGMcBGK8BGMgDGOoCGLQC2AEBwgIWEC4YgAQYigUYQxjIAxjqAhi0AtgBAZgDDeIDBRIBMSBAugYGCAEQARgIkgcDMS4xoAfrCQ&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/hard_rock_stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 65,326 personas</p> 
-                    </td> 
-                </tr> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">Inter & CO Stadium</p> 
-                        <a href="https://www.google.com/search?q=Inter+%26+CO+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn0_pAdCTe88K0rAJBfX_lILEGoo7UQ%3A1712991796307&ei=NC4aZuSzEsXT5OUPprCo-Ag&ved=0ahUKEwjknZbcz76FAxXFKbkGHSYYCo8Q4dUDCBA&uact=5&oq=Inter+%26+CO+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiEkludGVyICYgQ08gU3RhZGl1bTIEECMYJzILEC4YgAQYxwEYrwEyBhAAGBYYHjIGEAAYFhgeSLoTUL0KWL0KcAF4AZABAJgBa6ABa6oBAzAuMbgBA8gBAPgBAfgBApgCAqACd6gCEMICBxAjGOoCGCfCAg0QLhjHARivARjqAhgnwgIHEC4Y6gIYJ8ICHBAuGIAEGIoFGEMYxwEYrwEYyAMY6gIYtALYAQHCAhYQLhiABBiKBRhDGMgDGOoCGLQC2AEBwgIlEC4YQxivARjHARiABBiKBRiYBRiaBRieBRjIAxjqAhi0AtgBAZgDCboGBggBEAEYCJIHAzEuMaAHggc&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/Inter_&_co_stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 25,500 personas</p> 
-                    </td> 
-                </tr> 
-            </tbody>
-        </table> 
-        <table> 
-            <tbody> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">Mercedes Benz Stadium</p> 
-                        <a href="https://www.google.com/search?q=Mercedes+Benz+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn0_8DTbtSxa_NZ6uht9BwgkJlfUgaw%3A1712991845826&ei=ZS4aZsGBMqGJ5OUPxNiS8Ag&ved=0ahUKEwiByOTzz76FAxWhBLkGHUSsBI4Q4dUDCBA&uact=5&oq=Mercedes+Benz+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiFU1lcmNlZGVzIEJlbnogU3RhZGl1bTIKECMYgAQYigUYJzIQEC4YQxivARjHARiABBiKBTIKEAAYgAQYFBiHAjIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyChAAGIAEGIoFGEMyBRAAGIAEMgoQABiABBiKBRhDSKViUMJeWMJecAJ4AZABAJgBZ6ABZ6oBAzAuMbgBA8gBAPgBAfgBApgCA6ACfqgCEsICBxAjGOoCGCfCAg0QLhjHARivARjqAhgnwgIHEC4Y6gIYJ8ICFhAuGIAEGIoFGEMYyAMY6gIYtALYAQHCAhYQLhhDGIAEGIoFGMgDGOoCGLQC2AEBwgIcEC4YgAQYigUYQxjHARivARjIAxjqAhi0AtgBAcICHRAuGIAEGOMEGOkEGMcBGK8BGMgDGOoCGLQC2AEBwgIXEC4YgAQY4wQY6QQYyAMY6gIYtALYAQGYAwm6BgYIARABGAiSBwMyLjGgB5UK&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/Mercedes-Benz-Stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 73,000 personas</p> 
-                    </td> 
-                </tr> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">Met life Stadium</p> 
-                        <a href="https://www.google.com/search?q=Met+life+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn0-UvrJPA4zd9AWri5zo-EAOJwpRQA%3A1712991913871&ei=qS4aZrntNNnM1sQP6J-7yAY&ved=0ahUKEwj55Z2U0L6FAxVZppUCHejPDmkQ4dUDCBA&uact=5&oq=Met+life+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiEE1ldCBsaWZlIFN0YWRpdW0yEhAuGIAEGIoFGEMYxwEYrwEYCjIHEAAYgAQYCjIHEAAYgAQYCjIHEAAYgAQYCjIIEAAYFhgeGAoyCBAAGBYYHhgKMggQABgWGB4YCjIIEAAYFhgeGAoyCBAAGBYYHhgKMggQABgWGB4YCjIhEC4YgAQYigUYQxjHARivARgKGJcFGNwEGN4EGOAE2AEDSMgOUKkLWKkLcAJ4AZABAJgBXKABXKoBATG4AQPIAQD4AQH4AQKYAgOgAn2oAhHCAgcQIxjqAhgnwgIHEC4Y6gIYJ8ICDRAuGMcBGK8BGOoCGCfCAhMQABiABBiKBRhDGOoCGLQC2AEBwgIcEC4YgAQYigUYQxjHARivARjIAxjqAhi0AtgBApgDC7oGBggBEAEYAboGBggCEAEYCLoGBggDEAEYFJIHAzIuMaAHwQs&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/metlife_stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 82,500 personas</p> 
-                    </td> 
-                </tr> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">Nrg Stadium</p> 
-                        <a href="https://www.google.com/search?q=Nrg+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn0_QUj7XF-HuFKq6oUy8i-6F14MQMQ%3A1712991967710&ei=3y4aZtXuKvne1sQPxLiPgAk&ved=0ahUKEwiV2vOt0L6FAxV5r5UCHUTcA5AQ4dUDCBA&uact=5&oq=Nrg+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiC05yZyBTdGFkaXVtMgoQIxiABBiKBRgnMhAQLhiABBiKBRhDGMcBGK8BMgUQABiABDIFEAAYgAQyBRAAGIAEMgoQABiABBgUGIcCMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgUQABiABDIFEAAYgARIvA1Q8ApY8ApwAXgBkAEAmAFZoAFZqgEBMbgBA8gBAPgBAfgBApgCAqACZ6gCEsICBxAjGOoCGCfCAgcQLhjqAhgnwgIcEC4YgAQYigUYQxjHARivARjIAxjqAhi0AtgBAZgDCuIDBRIBMSBAugYGCAEQARgIkgcBMqAHpAk&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/nrg_stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 72,220 personas</p> 
-                    </td> 
-                </tr> 
-            </tbody>
-        </table> 
-        <table> 
-            <tbody> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">Q2 Stadium</p> 
-                        <a href="https://www.google.com/search?q=Q2+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn0_uBZ0_wz8olBZlOovjdjseMLcHgg%3A1712992024607&ei=GC8aZuPdJKzd1sQPpuS3iAk&ved=0ahUKEwjjyYTJ0L6FAxWsrpUCHSbyDZEQ4dUDCBA&uact=5&oq=Q2+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiClEyIFN0YWRpdW0yChAjGIAEGIoFGCcyEBAuGIAEGIoFGEMYxwEYrwEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjjDlCEDFiEDHABeAGQAQCYAVqgAVqqAQExuAEDyAEA-AEB-AECmAICoAJpqAIQwgIHECMY6gIYJ8ICBxAuGOoCGCfCAhwQLhiABBiKBRhDGMcBGK8BGMgDGOoCGLQC2AEBmAMKugYGCAEQARgIkgcBMqAHmAk&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/Q2_stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 20,738 personas</p> 
-                    </td> 
-                </tr> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">Sofi Stadium</p> 
-                        <a href="https://www.google.com/search?q=Sofi+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn08ndOMHJwSBs868w8rGz9lZx0Eiqg%3A1712992079519&ei=Ty8aZrWUH4rN1sQPgICzmAw&ved=0ahUKEwj195vj0L6FAxWKppUCHQDADMMQ4dUDCBA&uact=5&oq=Sofi+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiDFNvZmkgU3RhZGl1bTIKECMYgAQYigUYJzITEC4YgAQYigUYQxixAxjHARivATIFEAAYgAQyBRAAGIAEMgUQABiABDIFEC4YgAQyBRAAGIAEMgUQABiABDIKEAAYgAQYigUYQzIFEAAYgARI3QtQoAlYoAlwAXgBkAEAmAFpoAFpqgEDMC4xuAEDyAEA-AEB-AECmAICoAJ5qAISwgIHECMY6gIYJ8ICBxAuGOoCGCfCAhwQLhhDGK8BGMcBGIAEGIoFGMgDGOoCGLQC2AEBwgIcEC4YgAQYigUYQxjHARivARjIAxjqAhi0AtgBAcICFhAuGIAEGIoFGEMYyAMY6gIYtALYAQHCAh0QLhiABBjjBBjpBBjHARivARjIAxjqAhi0AtgBAZgDC7oGBggBEAEYCJIHAzEuMaAH7As&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/sofi_stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 70,000 personas</p> 
-                    </td> 
-                </tr> 
-                <tr class="estas"> 
-                    <td> 
-                        <p class="caption-top">State Farm Stadium</p> 
-                        <a href="https://www.google.com/search?q=State+Farm+Stadium&sca_esv=59018620b3723b92&sca_upv=1&rlz=1C1ONGR_esPE1087PE1087&sxsrf=ACQVn0_tTSE0Bwe2yWJ4VUab08L00qqp9w%3A1712992131093&ei=gy8aZp2sBZC85OUPi4u88Aw&ved=0ahUKEwjd-ef70L6FAxUQHrkGHYsFD84Q4dUDCBA&uact=5&oq=State+Farm+Stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiElN0YXRlIEZhcm0gU3RhZGl1bTIKECMYgAQYigUYJzIQEC4YQxivARjHARiABBiKBTIKEAAYgAQYFBiHAjIFEAAYgAQyBRAAGIAEMgoQABiABBiKBRhDMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEjnDFCdClidCnACeAGQAQCYAWegAWeqAQMwLjG4AQPIAQD4AQH4AQKYAgOgAoABqAITwgIHECMY6gIYJ8ICBxAuGOoCGCfCAhMQABiABBiKBRhDGOoCGLQC2AEBwgIcEC4YgAQYigUYQxjHARivARjIAxjqAhi0AtgBAsICFhAuGIAEGIoFGEMYyAMY6gIYtALYAQKYAwu6BgYIARABGAG6BgYIAhABGAiSBwMyLjGgB5YK&sclient=gws-wiz-serp" target="_blank">
-                            <img src="images_estadios/state_farm_stadium.jpg" width="300px" height="200px">
-                        </a> 
-                        <p class="caption-bottom">Capacidad: 63,400 personas</p> 
-                    </td> 
-                </tr> 
-            </tbody>
-        </table> 
-    </section>
-
+    <script src="js/datos.js"></script>
+    <script src="js/torneo.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/estadios.js"></script>
 </body>
-<footer class="abajo">
-    <p>&copy; 2024 Copa Amèrica. Todos los derechos reservados. ESAN</p>
-</footer>
 </html>
