@@ -52,6 +52,8 @@
         imagen.src = "images/banderas/" + equipo.iso + ".png";
         imagen.alt = "Bandera de " + equipo.nombre;
         imagen.loading = "lazy";
+        imagen.width = 640;
+        imagen.height = 427;
         articulo.append(imagen);
 
         const cuerpo = UI.crear("div", "tarjeta__cuerpo");

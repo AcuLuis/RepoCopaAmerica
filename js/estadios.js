@@ -49,11 +49,26 @@
 
     function tarjeta(estadio) {
         const articulo = UI.crear("article", "tarjeta");
+        const figura = UI.crear("figure", "tarjeta__figura");
         const imagen = UI.crear("img", "tarjeta__imagen");
         imagen.src = "images_estadios/" + estadio.imagen;
         imagen.alt = estadio.nombre;
         imagen.loading = "lazy";
-        articulo.append(imagen);
+        imagen.width = 900;
+        imagen.height = 600;
+        figura.append(imagen);
+
+        // Atribución de las fotos con licencia libre.
+        if (estadio.credito) {
+            const credito = UI.crear("figcaption", "tarjeta__credito", "Foto: ");
+            const enlace = UI.crear("a", null, estadio.credito.autor);
+            enlace.href = estadio.credito.url;
+            enlace.target = "_blank";
+            enlace.rel = "noopener noreferrer";
+            credito.append(enlace, document.createTextNode(" · " + estadio.credito.licencia));
+            figura.append(credito);
+        }
+        articulo.append(figura);
 
         const cuerpo = UI.crear("div", "tarjeta__cuerpo");
         cuerpo.append(UI.crear("h2", "tarjeta__titulo", estadio.nombre));

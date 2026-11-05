@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Luis Antonio Acuña Ayala",
   "scripts": {
-    "start": "npx --yes serve .",
+    "start": "node servidor.js",
     "test": "node --test"
   }
 }

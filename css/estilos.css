@@ -1325,6 +1325,64 @@ a.filtro {
     justify-content: center;
 }
 
+/* ---------- Accesibilidad ---------- */
+.saltar {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 2000;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radio-pequeno);
+    background: var(--oro-400);
+    color: var(--azul-900);
+    font-weight: 700;
+    transform: translateY(-200%);
+    transition: transform 0.2s;
+}
+
+.saltar:focus {
+    transform: translateY(0);
+}
+
+main:focus {
+    outline: none;
+}
+
+.centrado {
+    text-align: center;
+}
+
+/* ---------- Créditos de fotos ---------- */
+.tarjeta__figura {
+    position: relative;
+    margin: 0;
+}
+
+.tarjeta__credito {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.2rem 0.5rem;
+    border-top-left-radius: var(--radio-pequeno);
+    background: rgba(7, 26, 61, 0.75);
+    color: var(--blanco);
+    font-size: 0.7rem;
+}
+
+.tarjeta__credito a {
+    color: var(--blanco);
+}
+
+/* Las imágenes llevan width/height para reservar espacio; la proporción la define el CSS. */
+.tarjeta__imagen,
+.portada img {
+    height: auto;
+}
+
+.tabla-posiciones {
+    min-width: 480px;
+}
+
 /* ---------- Pie de página ---------- */
 .pie {
     padding: 2.5rem 0 1.5rem;
